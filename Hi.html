@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hi</h1>
+  </body>
+  <script>
+    function twentytwentyTwo(voted, didNotVote) {
+      const yourVote = prompt(
+        "Did you vote in this years elections? (Yes or No)"
+      );
+      if (yourVote === "Yes") {
+        voted();
+      } else if (yourVote === "No") {
+        didNotVote();
+      }
+      function voted() {
+        let coalition = prompt(
+          "In this years election, which of the two main coalitions do you prefer to win between Kenya Kwanza and Azimio La Umoja ?"
+        );
+
+        if (yourVote === "Yes" && coalition === "Kenya Kwanza") {
+          alert(
+            "Kenya Kwanza stands for improving the lives of ordinary mwananchi "
+          );
+        } else if (yourVote === "Yes" && coalition === "Azimio La Umoja") {
+          alert(
+            "Azimio La Umoja stands for completely eradicating the cancer that is corruption in Kenya "
+          );
+        }
+      }
+
+      function didNotVote() {
+        let choice = prompt("Care to explain why you did not vote? ");
+
+        if (yourVote === "No") {
+          alert("The user gave this answer for not voting: " + choice);
+        } else {
+          alert("You have not entered a valid answer");
+        }
+      }
+    }
+    twentytwentyTwo();
+  </script>
+</html>
